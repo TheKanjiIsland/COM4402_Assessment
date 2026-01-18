@@ -1,3 +1,5 @@
+# Implementing the question_bank
+
 question_bank = [
     {
         "question": "What is the capital of France?",
@@ -26,5 +28,10 @@ question_bank = [
     }
 ]
 
+# Implementing other useful variables
+
+score = 0
+question_counter = 0
+total_questions = len(question_bank)
 
 print(question_bank)
