@@ -58,11 +58,12 @@ def get_user_number_in_range(min_val, max_val):
 def check_answer(user_answer):
     global score
 
-    if user_answer == answers[question_counter]:
+    if user_answer == questions[question_counter]['answer']:
         score += 1
         print("Correct!")
     else:
         print("Incorrect.")
+
 
 
 
