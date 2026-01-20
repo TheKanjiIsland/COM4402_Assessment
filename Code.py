@@ -44,14 +44,14 @@ def display_question():
 
 # User data function
 
-def get_user_answer():
+def get_user_number_in_range(min_val, max_val):
+    valid_options = questions[question_counter]['options']
     while True:
-        user_input = input("Your answer (1/2/3/4): ")
-
-        if user_input.isdigit() and 1 <= int(user_input) <= 4:
-            return int(user_input)
+        user_input = input("Your answer (type exactly as shown): ")
+        if user_input in valid_options:
+            return user_input
         else:
-            print("Invalid input. Please enter 1, 2, 3, or 4.")
+            print("Invalid input. Please type one of the options exactly as displayed.")
 
 # Checking the answer
 
@@ -63,6 +63,7 @@ def check_answer(user_answer):
         print("Correct!")
     else:
         print("Incorrect.")
+
 
 
 
