@@ -17,11 +17,11 @@ options = {
 }
 
 answers = {
-    0: "2",
-    1: "3",
-    2: "3",
-    3: "2",
-    4: "2"
+    0: 2,
+    1: 3,
+    2: 3,
+    3: 2,
+    4: 2
 }
 
 # Implementing other useful variables
@@ -38,3 +38,25 @@ def display_question():
     print("2:", options[question_counter][1])
     print("3:", options[question_counter][2])
     print("4:", options[question_counter][3])
+
+# User data function
+
+def get_user_answer():
+    while True:
+        user_input = input("Your answer (1/2/3/4): ")
+
+        if user_input.isdigit() and 1 <= int(user_input) <= 4:
+            return int(user_input)
+        else:
+            print("Invalid input. Please enter 1, 2, 3, or 4.")
+
+# Checking the answer
+
+def check_answer(user_answer):
+    global score
+
+    if user_answer == answers[question_counter]:
+        score += 1
+        print("Correct!")
+    else:
+        print("Incorrect.")
