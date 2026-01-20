@@ -44,7 +44,7 @@ def display_question():
 
 # User data function
 
-def get_user_number_in_range(min_val, max_val):
+def get_user_answer():
     valid_options = questions[question_counter]['options']
     while True:
         user_input = input("Your answer (type exactly as shown): ")
@@ -74,3 +74,19 @@ def next_question():
 
 def calculate_percentage():
     return (score / total_questions) * 100
+
+# main quiz loop
+
+def run_quiz():
+    global question_counter
+    while question_counter < total_questions:
+        display_question()
+        user_answer = get_user_answer()
+        check_answer(user_answer)
+        next_question()
+
+    percentage = calculate_percentage()
+    print("\nFinal score:", score, "out of", total_questions)
+    print("Percentage:", int(percentage), "%")
+
+run_quiz()
