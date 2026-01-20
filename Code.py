@@ -1,28 +1,32 @@
 # Implementing the question_bank
 
-questions = {
-    0: "What is the capital of France?",
-    1: "Which data structure uses key-value pairs?",
-    2: "What is 5 + 7?",
-    3: "Which planet is known as the Red Planet?",
-    4: "Which language is used to create web pages?"
-}
-
-options = {
-    0: ["London", "Paris", "Berlin", "Madrid"],
-    1: ["List", "Tuple", "Dictionary", "Set"],
-    2: ["10", "11", "12", "13"],
-    3: ["Earth", "Mars", "Jupiter", "Venus"],
-    4: ["Python", "HTML", "Java", "C++"]
-}
-
-answers = {
-    0: 2,
-    1: 3,
-    2: 3,
-    3: 2,
-    4: 2
-}
+questions = [
+    {
+        "question": "What is the capital of France?",
+        "options": ["London", "Paris", "Berlin", "Madrid"],
+        "answer": "Paris"
+    },
+    {
+        "question": "Which data structure uses key-value pairs?",
+        "options": ["List", "Tuple", "Dictionary", "Set"],
+        "answer": "Dictionary"
+    },
+    {
+        "question": "What is 5 + 7?",
+        "options": ["10", "11", "12", "13"],
+        "answer": "12"
+    },
+    {
+        "question": "Which planet is known as the Red Planet?",
+        "options": ["Earth", "Mars", "Jupiter", "Venus"],
+        "answer": "Mars"
+    },
+    {
+        "question": "Which language is used to create web pages?",
+        "options": ["Python", "HTML", "Java", "C++"],
+        "answer": "HTML"
+    }
+]
 
 # Implementing other useful variables
 
@@ -59,4 +63,5 @@ def check_answer(user_answer):
         print("Correct!")
     else:
         print("Incorrect.")
+
 
