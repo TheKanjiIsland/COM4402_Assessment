@@ -29,3 +29,12 @@ answers = {
 score = 0
 question_counter = 0
 total_questions = len(questions)
+
+# Display question function
+
+def display_question():
+    print(f"\nQuestion {question_counter + 1}: {questions[question_counter]}")
+    print("1:", options[question_counter][0])
+    print("2:", options[question_counter][1])
+    print("3:", options[question_counter][2])
+    print("4:", options[question_counter][3])
