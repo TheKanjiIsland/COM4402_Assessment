@@ -37,10 +37,10 @@ total_questions = len(questions)
 # Display question function
 
 def display_question():
-    print(f"\nQuestion {question_counter + 1}: {questions[question_counter]}")
+    print(f"\nQuestion {question_counter + 1}: {questions[question_counter]['question']}")
     
-    for i in range(4):
-        print(f"{i + 1}: {options[question_counter][i]}")
+    for i in range(len(questions[question_counter]['options'])):
+        print(f"{i + 1}: {questions[question_counter]['options'][i]}")
 
 # User data function
 
@@ -63,5 +63,6 @@ def check_answer(user_answer):
         print("Correct!")
     else:
         print("Incorrect.")
+
 
 
