@@ -70,8 +70,7 @@ def next_question():
     global question_counter
     question_counter += 1
 
+# Calculating percentage
 
-
-
-
-
+def calculate_percentage():
+    return (score / total_questions) * 100
