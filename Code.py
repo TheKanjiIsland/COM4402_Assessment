@@ -64,6 +64,13 @@ def check_answer(user_answer):
     else:
         print("Incorrect.")
 
+# Moving on to the next question
+
+def next_question():
+    global question_counter
+    question_counter += 1
+
+
 
 
 
